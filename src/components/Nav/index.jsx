@@ -9,6 +9,14 @@ import { BiMessageSquareDetail } from "react-icons/bi"
 const Nav = () => {
   const [activeNav, setActiveNav] = useState('#')
 
+  const navLinks = {
+    '#': <AiOutlineHome />,
+    '#about': <AiOutlineUser />,
+    '#experience': <BiBook />,
+    '#services': <RiServiceLine />,
+    '#contact': <BiMessageSquareDetail />
+  }
+
   function createNavLink(href, icon) {
     return (
       <a
@@ -23,11 +31,7 @@ const Nav = () => {
 
   return (
     <nav>
-      {createNavLink('#', <AiOutlineHome />)}
-      {createNavLink('#about', <AiOutlineUser />)}
-      {createNavLink('#experience', <BiBook />)}
-      {createNavLink('#services', <RiServiceLine />)}
-      {createNavLink('#contact', <BiMessageSquareDetail />)}
+      {Object.entries(navLinks).map(([href, icon]) => createNavLink(href, icon))}
     </nav>
   )
 }

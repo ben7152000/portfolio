@@ -1,10 +1,8 @@
 import React from 'react'
 import './index.css'
 import ME from '../../assets/me-about.jpg'
-import { FaAward } from "react-icons/fa"
-import { FiUsers } from 'react-icons/fi'
-import { VscFolderLibrary } from "react-icons/vsc"
 import Card from './components/Card'
+import { aboutData } from '../../data'
 
 const About = () => {
   return (
@@ -21,27 +19,13 @@ const About = () => {
 
         <div className='about__content'>
           <div className='about__cards'>
-            <Card
-              icon={<FaAward className='about__icon' />}
-              title='Experience'
-              description='3+ Years Working'
-            />
-
-            <Card
-              icon={<FiUsers className='about__icon' />}
-              title='Clients'
-              description='200+ Worldwide'
-            />
-
-            <Card
-              icon={<VscFolderLibrary className='about__icon' />}
-              title='Projects'
-              description='80+ Completed'
-            />
+            {aboutData.map(({ title, icon, description }, index) => {
+              return <Card key={index} title={title} icon={icon} description={description} />
+            })}
           </div>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet, architecto autem error eveniet exercitationem facilis incidunt nam necessitatibus perspiciatis quod tempore temporibus totam. Deleniti fugiat libero neque repellendus sequi.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto distinctio dolorum ducimus earum, esse iusto laudantium minima mollitia necessitatibus officiis quam quibusdam quod quos repellat tempore voluptate voluptatibus. Dolore, velit!
           </p>
 
           <a href="#contact" className='btn btn-primary'>Let's Talk</a>

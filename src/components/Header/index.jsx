@@ -1,8 +1,8 @@
 import React from 'react'
 import './index.css'
-import CTA from './components/CTA'
-import ME from '../../assets/me.png'
+import Cta from './components/Cta'
 import Socials from './components/Socials'
+import ME from '../../assets/me.png'
 
 const Header = () => {
   return (
@@ -11,7 +11,7 @@ const Header = () => {
         <h5>Hello I'm</h5>
         <h1>Angelo Chou</h1>
         <h5 className="text-light">Fullstack Developer</h5>
-        <CTA />
+        <Cta />
         <Socials />
 
         <div className='me'>

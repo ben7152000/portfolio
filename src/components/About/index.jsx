@@ -1,8 +1,7 @@
 import React from 'react'
 import './index.css'
 import ME from '../../assets/me-about.jpg'
-import Card from './components/Card'
-import { aboutData } from '../../data'
+import { aboutData } from '../../data/data'
 
 const About = () => {
   return (
@@ -12,15 +11,21 @@ const About = () => {
 
       <div className='container about__container'>
         <div className='about__me'>
-          <div className='about__me-image'>
+          <div className='about__me--image'>
             <img src={ME} alt="about image" />
           </div>
         </div>
 
         <div className='about__content'>
           <div className='about__cards'>
-            {aboutData.map(({ title, icon, description }, index) => {
-              return <Card key={index} title={title} icon={icon} description={description} />
+            {aboutData.map(({ id, title, icon, description }, index) => {
+              return (
+                <article key={id} className='about__card'>
+                  {icon}
+                  <h5>{title}</h5>
+                  <small>{description}</small>
+                </article>
+              )
             })}
           </div>
 

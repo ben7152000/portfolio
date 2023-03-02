@@ -1,6 +1,6 @@
 import React from 'react'
 import './index.css'
-import { testimonialData } from "../../data"
+import { testimonialData } from "../../data/data"
 import { Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from "swiper/react"
 import 'swiper/css'
@@ -18,14 +18,16 @@ const Testimonials = () => {
         pagination={{ clickable: true }}
         className="container testimonials__container"
       >
-        {testimonialData.map(({ id, avatar,name, review }) => {
+        {testimonialData.map(({id, avatar,name, review }) => {
           return (
-            <SwiperSlide className='testimonial'>
+            <SwiperSlide key={id} className='testimonial'>
               <div className='client__avatar'>
                 <img src={avatar} alt={name} />
               </div>
               <h5>{name}</h5>
-              <small className='client__review'>{review}</small>
+              <small className='client__review'>
+                {review}
+              </small>
             </SwiperSlide>
           )
         })}

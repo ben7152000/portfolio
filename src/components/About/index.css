@@ -13,14 +13,14 @@
     place-items: center;
 }
 
-.about__me-image {
+.about__me--image {
     border-radius: 2rem;
     overflow: hidden;
     transform: rotate(10deg);
     transition: var(--transition);
 }
 
-.about__me-image:hover {
+.about__me--image:hover {
     transform: rotate(0);
 }
 
@@ -66,7 +66,6 @@
 }
 
 /* Media Queries (Medium Devices) */
-
 @media screen and (max-width: 1024px) {
     .about__container {
         grid-template-columns: 1fr;
@@ -84,7 +83,6 @@
 }
 
 /* Media Queries (Small Devices) */
-
 @media screen and (max-width: 600px) {
     .about__me {
         width: 65%;

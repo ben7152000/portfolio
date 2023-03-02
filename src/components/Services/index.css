@@ -41,7 +41,7 @@
     margin-bottom: 0.8rem;
 }
 
-.service__list-icon {
+.service__list--icon {
     color: var(--color-primary);
     margin-top: 2px;
 }
@@ -51,7 +51,6 @@
 }
 
 /* Media Queries (Medium Devices) */
-
 @media screen and (max-width: 1024px) {
     .services__container {
         grid-template-columns: 1fr 1fr;
@@ -64,11 +63,9 @@
 }
 
 /* Media Queries (Small Devices) */
-
 @media screen and (max-width: 600px) {
     .services__container {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
-
 }

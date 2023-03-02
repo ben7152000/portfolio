@@ -35,13 +35,12 @@
     gap: 1rem;
 }
 
-.experience__details-icon {
+.experience__details--icon {
     margin-top: 6px;
     color: var(--color-primary);
 }
 
 /* Media Queries (Medium Devices) */
-
 @media screen and (max-width: 1024px) {
     .experience__container {
         grid-template-columns: 1fr;
@@ -59,7 +58,6 @@
 }
 
 /* Media Queries (Small Devices) */
-
 @media screen and (max-width: 600px) {
     .experience__container {
         gap: 1rem;

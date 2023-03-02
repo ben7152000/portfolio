@@ -10,7 +10,6 @@ header {
     position: relative;
 }
 
-/* CTA */
 .cta {
     margin-top: 2.5rem;
     display: flex;
@@ -18,7 +17,6 @@ header {
     gap: 1.2rem;
 }
 
-/* Socials */
 .header__socials {
     display: flex;
     flex-direction: column;
@@ -36,7 +34,6 @@ header {
     background-color: var(--color-primary);
 }
 
-/* Me */
 .me {
     background-image: linear-gradient(var(--color-primary), transparent);
     width: 22rem;
@@ -49,7 +46,6 @@ header {
     padding: 5rem 1.5rem 1.5rem 1.5rem;
 }
 
-/* Scroll Down */
 .scroll__down {
     position: absolute;
     right: -2.3rem;
@@ -60,7 +56,6 @@ header {
 }
 
 /* Media Queries (Medium Devices) */
-
 @media screen and (max-width: 1024px) {
     header {
         height: 68vh;
@@ -68,7 +63,6 @@ header {
 }
 
 /* Media Queries (Small Devices) */
-
 @media screen and (max-width: 600px) {
     header {
         height: 100vh;

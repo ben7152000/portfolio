@@ -1,7 +1,6 @@
 import React from 'react'
 import './index.css'
-import Item from './components/Item'
-import { portfolioData } from "../../data"
+import { portfolioData } from "../../data/data"
 
 const Portfolio = () => {
   return (
@@ -11,7 +10,18 @@ const Portfolio = () => {
 
       <div className="container portfolio__container">
         {portfolioData.map(({ id, image, title, github, demo }) => {
-          return <Item key={id} image={image} title={title} github={github} demo={demo} />
+          return (
+            <article key={id} className='portfolio__item'>
+              <div className='portfolio__item--image'>
+                <img src={image} alt={title}/>
+              </div>
+              <h3>{title}</h3>
+              <div className='portfolio__item--cta'>
+                <a href={github} className='btn' target='_blank' rel='noreferrer'>GitHub</a>
+                <a href={demo} className='btn btn-primary' target='_blank' rel='noreferrer'>Live Demo</a>
+              </div>
+            </article>
+          )
         })}
       </div>
     </section>

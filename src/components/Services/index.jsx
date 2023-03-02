@@ -1,7 +1,7 @@
 import React from 'react'
 import './index.css'
 import { serviceData } from "../../data/data"
-import { BiCheck } from "react-icons/bi"
+import { BsCheckLg } from "react-icons/bs"
 
 const Services = () => {
   return (
@@ -20,7 +20,7 @@ const Services = () => {
                 {texts.map((text, index) => {
                   return (
                     <li key={index}>
-                      <BiCheck className='service__list--icon' />
+                      <BsCheckLg className='service__list--icon' />
                       <p>{text}</p>
                     </li>
                   )

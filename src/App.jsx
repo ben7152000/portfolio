@@ -1,13 +1,13 @@
 import React, { lazy, Suspense } from 'react'
 import Header from "./components/Header"
 import Nav from './components/Nav'
+import Footer from "./components/Footer"
 const About = lazy(() => import('./components/About'))
 const Experience = lazy(() => import('./components/Experience'))
 const Services = lazy(() => import('./components/Services'))
 const Portfolio = lazy(() => import('./components/Portfolio'))
 const Testimonials = lazy(() => import('./components/Testimonials'))
 const Contact = lazy(() => import('./components/Contact'))
-import Footer from "./components/Footer"
 
 const App = () => {
   return (

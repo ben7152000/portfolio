@@ -1,10 +1,11 @@
 import React from 'react'
 import './index.css'
 import { testimonialData } from "../../data/data"
-import { Pagination } from 'swiper'
+import { Pagination, Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from "swiper/react"
 import 'swiper/css'
 import 'swiper/css/pagination'
+import 'swiper/css/autoplay'
 
 const Testimonials = () => {
   return (
@@ -13,9 +14,14 @@ const Testimonials = () => {
       <h2>Testimonials</h2>
 
       <Swiper
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay]}
+        spaceBetween={40}
         slidesPerView={1}
         pagination={{ clickable: true }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         className="container testimonials__container"
       >
         {testimonialData.map(({id, avatar,name, review }) => {

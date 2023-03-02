@@ -20,6 +20,7 @@ const Nav = () => {
   function createNavLink(href, icon) {
     return (
       <a
+        key={href}
         href={href}
         onClick={() => setActiveNav(href)}
         className={activeNav === href ? 'active' : ''}

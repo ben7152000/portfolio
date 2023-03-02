@@ -62,7 +62,7 @@ h1 {
 
 section {
     margin-top: 8rem;
-    padding-top: 8rem;
+    padding-top: 6rem;
 }
 
 section > h2,
@@ -123,7 +123,7 @@ img {
         width: var(--container-width-md)
     }
 
-    .section {
+    section {
         margin-top: 6rem;
     }
 }
@@ -134,7 +134,11 @@ img {
         width: var(--container-width-sm)
     }
 
-    .section > h2 {
+    section {
+        padding-top: 2rem;
+    }
+
+    section > h2 {
         margin-bottom: 2rem;
     }
 }
